@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ProfileComponentComponent } from './profile-component/profile-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GridProfileComponent } from './card-profile/grid-profile/grid-profile.component';
+import { GridProfileComponent } from './card-profile/grid-profile.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
