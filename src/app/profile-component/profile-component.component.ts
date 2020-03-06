@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Profile } from '../profile';
+import { Profile } from '../profile-model/profile';
 
 @Component({
   selector: 'app-profile-component',
@@ -28,8 +28,7 @@ saveProfile(){
   lastName: this.profileForm.value.lastName,
   age:this.profileForm.value.age,
   gender:this.profileForm.value.gender,
-  privateInformation:this.profileForm.value.privateInformation,
-  akskas: 'asasas'
+  privateInformation:this.profileForm.value.privateInformation
   }
   console.log(profile);
 
