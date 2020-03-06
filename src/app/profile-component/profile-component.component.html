@@ -1,0 +1,52 @@
+<form [formGroup]="profileForm">
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+    </div>
+    <div class="col-sm">
+      <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+    </div>
+        <div class="col-sm">
+       <label>
+    Age:
+    <input type="text" formControlName="age">
+  </label>
+    </div>    <div class="col-sm">
+      <label>
+    Gender
+    <input type="text" formControlName="gender">
+  </label>
+    </div>    
+    <div class="col-sm">
+       <label>
+    Private Information
+    <input type="checkbox" formControlName="privateInformation">
+  </label>
+
+    </div>
+    <div class="col-sm">
+      <button (click)="saveProfile()" type="button">Save Profile</button>
+
+    </div>
+  </div>
+</div>
+  
+
+
+  
+
+  
+
+  
+ 
+
+</form>
