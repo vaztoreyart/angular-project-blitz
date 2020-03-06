@@ -3,5 +3,5 @@ export interface Profile {
   lastName: string;
   age: string;
   gender: string;
-  privateProfile: boolean;
+  isPrivateProfile: boolean;
 }

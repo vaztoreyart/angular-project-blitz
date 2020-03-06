@@ -11,5 +11,6 @@ export class GridProfileComponent implements OnInit {
 
   ngOnInit() {
   }
+  profiles = [];
 
 }

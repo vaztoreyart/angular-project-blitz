@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Profile } from '../profile-model/profile';
 
@@ -11,7 +11,7 @@ export class ProfileComponentComponent implements OnInit {
 
   constructor() { }
 
-
+ @Output() profileEmmitter: EventEmitter<Profile> = new EventEmitter();
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -28,9 +28,10 @@ saveProfile(){
   lastName: this.profileForm.value.lastName,
   age:this.profileForm.value.age,
   gender:this.profileForm.value.gender,
-  privateProfile:this.profileForm.value.privateInformation
+  isPrivateProfile:this.profileForm.value.privateInformation
   }
   console.log(profile);
+  this.profileEmmitter.emit(profile);
 
   
 }
