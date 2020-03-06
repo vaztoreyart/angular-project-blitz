@@ -28,7 +28,7 @@ saveProfile(){
   lastName: this.profileForm.value.lastName,
   age:this.profileForm.value.age,
   gender:this.profileForm.value.gender,
-  privateInformation:this.profileForm.value.privateInformation
+  privateProfile:this.profileForm.value.privateInformation
   }
   console.log(profile);
 
