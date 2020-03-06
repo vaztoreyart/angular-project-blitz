@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Profile } from '../profile-model/profile';
+import { ProfileHelperService } from '../services/profile-helper.service';
 
 @Component({
   selector: 'app-profile-component',
@@ -9,9 +10,8 @@ import { Profile } from '../profile-model/profile';
 })
 export class ProfileComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileService: ProfileHelperService) { }
 
- @Output() profileEmmitter: EventEmitter<Profile> = new EventEmitter();
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -31,7 +31,7 @@ saveProfile(){
   isPrivateProfile:this.profileForm.value.privateInformation
   }
   console.log(profile);
-  this.profileEmmitter.emit(profile);
+  this.profileService.setProfile(profile);
 
   
 }

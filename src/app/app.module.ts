@@ -7,10 +7,12 @@ import { HelloComponent } from './hello.component';
 import { ProfileComponentComponent } from './profile-component/profile-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GridProfileComponent } from './card-profile/grid-profile.component';
+import { ProfileHelperService } from './services/profile-helper.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
   declarations: [ AppComponent, HelloComponent, ProfileComponentComponent, GridProfileComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ProfileHelperService]
 })
 export class AppModule { }
